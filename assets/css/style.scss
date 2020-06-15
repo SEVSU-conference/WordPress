@@ -1,0 +1,29 @@
+* {
+	box-sizing: border-box;
+}
+
+div, p, h1, h2, h3, h4, h5, h6{
+	margin: 0;
+}
+
+body {
+	font-family: 'Gotham Pro', sans-serif;
+	margin: 0;
+	background-color: #fff;
+}
+
+.container {
+	max-width: 1190px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+@import 'header';
+@import 'start-page';
+@import 'description';
+@import 'main-tracks';
+@import 'speakers';
