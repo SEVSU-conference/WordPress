@@ -3,11 +3,11 @@
 
 <?php
 $url="http://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-$email=$redux_demo['emailFoкSend'];
-if($_GET['subname']){
+$email=$redux_demo['emailForSend'];
+if($_POST['subname']){
     wp_mail($email,'запись на конференцию',"имя:{$_POST['subname']}, отчество:{$_POST['secondName']},
     фамилия:{$_POST['subname']}, телефон:{$_POST['tel-number']}, место работы:{$_POST['work']},
-    должность:{$_POST['activity']}, билет:{$_POST['ticket']}, тематика:{$_POST['category']}");
+    должность:{$_POST['activity']}, билет:{$_POST['ticket']}, тематика:{$_POST['category']}","From: {$_POST['email']} ");
 }
 ?>
 <!DOCTYPE html>

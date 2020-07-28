@@ -706,7 +706,7 @@ Redux::setSection( $opt_name, array(
                 'placeholder' => 'Placeholder Text',
             ),
             array(
-                'id'          => 'emailFoкSend',
+                'id'          => 'emailForSend',
                 'type'        => 'text',
                 'title'       => __( 'email получателя', 'redux-framework-demo' ),
                 'subtitle'    => __( '', 'redux-framework-demo' ),
