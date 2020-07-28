@@ -42,9 +42,9 @@ global $redux_demo;
                         <?php if($redux_demo['blocks'][2]==true):?><li><a href="#description">О проекте</a></li><?endif;?>
                         <?php if($redux_demo['blocks'][3]==true):?><li><a href="#tracks">Треки</a></li><?endif;?>
                         <?php if($redux_demo['blocks'][4]==true):?><li><a href="#speakers">Спикеры</a></li><?endif;?>
-                        <?php if($redux_demo['blocks'][5]==true):?><li><a href="">Мероприятия</a></li><?endif;?>
-                        <?php if($redux_demo['blocks'][6]==true):?><li><a href="">Купить билеты</a></li><?endif;?>
-                        <?php if($redux_demo['blocks'][7]==true):?><li><a href="">Партнеры</a></li><?endif;?>
+                        <?php if($redux_demo['blocks'][5]==true):?><li><a href="#at-conference">Мероприятия</a></li><?endif;?>
+                        <?php if($redux_demo['blocks'][6]==true):?><li><a href="#buy-tickets">Купить билеты</a></li><?endif;?>
+                        <?php if($redux_demo['blocks'][7]==true):?><li><a href="#partners">Партнеры</a></li><?endif;?>
                     </ul>
                 </nav>
             </div>
