@@ -1,0 +1,375 @@
+* {
+	box-sizing: border-box;
+}
+
+div, p, h1, h2, h3, h4, h5, h6{
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Gotham Pro', sans-serif;
+	font-size: 1rem;
+	font-style: normal;
+	min-height: 100vh;
+	display: flex;
+}
+
+$blue-color:#0089a9;
+.wrapper {
+}
+
+.bg {
+	background-image: url("../img/registration-bg.png");
+	background-size: cover;
+	background-position: right center;
+	max-width: 50%;
+	width: 100%;
+}
+
+.registration {
+	padding: 0 0.5%;
+}
+
+.reg-content {
+	max-width: 555px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+h2, h4 {
+	color: #0089a9;
+	text-align: center;
+}
+
+h2 {
+	font-size: 3.1rem;	
+	font-weight: 900;
+	margin-top: 40px;
+}
+
+h4 {
+	font-size: 1.4rem;
+	margin-top: 5px;
+}
+
+input {
+	outline: none;
+}
+
+.box-input {
+	position: relative;
+	padding-top: 0.5em;
+	margin-top: 30px;
+}
+.box-input input {
+	border: none;
+	border-bottom: 1px solid $blue-color;
+	width: 100%;
+	font-size: 1rem;
+	padding: 5px;
+	color: $blue-color;
+}
+$grey: #c7c7c7;
+.box-input label {
+	position: absolute;
+	top: 13px;
+    left: 4px;
+	transition: .3s ease-out;
+	pointer-events: none;
+	color: $grey;
+}
+.box-input input:focus ~ label,
+.box-input input.is-fill ~ label {
+	top: -15px;
+	font-size: 0.8rem;
+}
+
+.box-input-row {
+	display: flex;
+	justify-content: space-between;
+	.box-input {
+		width: 47%;
+	}
+}
+
+.button-wrapper {
+	display: flex;
+    align-items: center;
+	margin-top: 50px;
+	
+    margin-bottom: 15px;
+
+    a {
+	    width: 50%;
+    }
+}
+
+.button {
+	color: #fff;
+	font-family: 'Ubuntu', 'Gothem Pro', sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	text-transform: uppercase;
+	border-radius: 50px;
+	border: none;
+	width: 50%;
+	&:focus {
+		outline: none;
+	}
+}
+
+.return-button {
+	color: #1a95b2;
+	font-size: 1.1rem;
+	background-color: rgba(238, 238, 238, 0);
+	width: 100%;
+	transition: background-color 0.2s;
+	&:hover {
+		background-color: rgba(238, 238, 238, 1);
+	}
+}
+
+$shadow-width: 6px;
+.confirm-button {
+	font-size: 1.4rem;
+	background-color: #a9da20;
+	box-shadow: 0px 0px 0px $shadow-width rgba(169, 218,  32, 0.5);	
+	padding: 10px;
+	&:hover {
+		color: #fbfcf7;
+		background-color: #87ab24;
+		box-shadow: 0px 0px 0px $shadow-width rgba(135, 171,  36, 0.5);
+		transition: all 0.2s ease-out 0s;
+	}
+	&:active {
+		background: linear-gradient(-10deg, #a9da20, #77961f);
+		border: none;
+	}
+}
+
+
+
+.select-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 0.5em;
+  position: relative;
+}
+
+
+.select-box .options-container {
+	position: absolute;
+	top: 100%;
+	max-height: 0;
+	background-color: #fff;
+	color: #8f8f8f;
+	width: 100%;
+	opacity: 0;
+	overflow: hidden;
+	max-height: 0;
+  	transition: all 0.4s ease;
+
+	border-right: solid 1px $blue-color;
+	border-left: solid 1px $blue-color;
+	border-bottom: solid 1px $blue-color;
+	border-top: none;
+	
+	z-index: 1;
+	order: 1;
+}
+.select-box .options-container.active {
+	max-height: 300px;
+  	opacity: 1;
+}
+
+
+.selected {	
+	border-bottom: 1px solid #0089a9;
+	width: 100%;
+	font-size: 1rem;
+	padding: 5px;
+	color: $grey;
+	order: 0;
+    padding-right: 25px;
+	&:after {
+		content: "\2039";
+	    color: #0089a9;
+	    font-size: 20px;
+	    position: absolute;
+	    transform: rotateZ(-90deg);
+	    right: 19px;
+	    top: 11px;
+	    transition: .5s;
+	}
+}
+
+.selected.active {
+	color: $blue-color;
+}
+
+.selected,
+.select-box label  {
+  cursor: pointer;
+}
+
+.option label {
+    padding: 7px 0 7px 10px;
+    display: block;
+}
+
+.option {
+	&:hover {
+		color: $blue-color;
+	}
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg) rotateZ(-90deg);
+}
+
+.checkbox {
+	margin-top: 30px;
+	color: $grey;
+    padding-top: 0.5em;
+    label a { 
+	    color: $blue-color; 
+	}
+}
+
+input[type=checkbox] + label {
+  cursor: pointer;
+  user-select: none;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+input[type=radio] {
+  display: none;
+}
+
+input[type=checkbox] + label:before {
+	content: "\2714";
+    border: 2px solid $blue-color;
+	color: transparent;
+    margin-right: 1rem;
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    vertical-align: bottom;
+    text-align: center;
+	transition: .1s;
+}
+
+input[type=checkbox] + label:active:before {
+  transform: scale(0);
+}
+
+input[type=checkbox]:checked + label:before {
+  color: $blue-color;
+}
+
+input ~ p.error-message,
+input ~ p.error-message-empty {
+	opacity: 0;
+    color: #e44343;
+    font-size: 0.85rem;
+    pointer-events: none;
+    position: absolute;
+    background-color: #fff;
+    right: 0.5rem;
+    padding: 0 3px;
+    top: 29px;
+    transition: opacity .5s;
+}
+
+input.empty ~ p.error-message-empty {
+    opacity: 1;	
+}
+
+input.novalid ~ p.error-message-novalid {
+    opacity: 1;	
+}
+
+.selected .error-message {
+	opacity: 0; 
+	color: #e44343;
+	font-size: 0.85rem;
+	pointer-events: none;
+	position: absolute;
+    right: 0.5rem;
+    top: 28px;
+    background-color: #fff;
+    transition: opacity .5s;
+}
+
+.selected.empty .error-message{
+	opacity: 1;
+}
+
+.checkbox .error-message {
+	opacity: 0;
+    padding-top: 10px;
+    position: initial;
+    transition: opacity .5s;
+}
+
+input[type=checkbox].empty ~ p.error-message{
+	opacity: 1;
+}
+
+@media (max-width: 1024px) {
+	.button-wrapper {
+	   	width: 100%;
+	    position: relative;
+	    left: 0;
+    }
+}
+@media (max-width: 768px) {
+	.bg {
+	    max-width: 30%;
+	}
+	.reg-content {
+	     margin-left: 0; 
+	}
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h4 {
+		font-size: 1.1rem;
+	}
+	.return-button {
+		font-size: 1rem;
+	}
+	.confirm-button {
+		font-size: 1.2rem;
+	}
+}
+@media (max-width: 450px) {
+	.bg {
+		width: 0;
+	}
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	h4 {
+		font-size: 1.1rem;
+		margin-bottom: 50px;
+	}
+	.reg-content {
+		max-width: 100%;
+		margin: 0;
+	}
+}

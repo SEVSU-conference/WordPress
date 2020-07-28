@@ -148,6 +148,7 @@ function edu_scripts() {
     wp_enqueue_style( 'edu-owlCarousel-theme', get_template_directory_uri()."/assets/owl-carousel/owl.theme.default.css" , array(), '1.0' );
     wp_enqueue_style( 'edu-fonts', get_template_directory_uri()."/assets/css/fonts.css" , array(), '1.0' );
     wp_enqueue_style( 'edu-style-main', get_template_directory_uri()."/assets/css/style.css" , array(), '1.0' );
+    wp_enqueue_style( 'edu-style-main', get_template_directory_uri()."/assets/css/registration.css" , array(), '1.0' );
 
     wp_style_add_data( 'edu-style', 'rtl', 'replace' );
 
